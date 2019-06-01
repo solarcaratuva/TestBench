@@ -5,7 +5,7 @@ import serial
 
 #ser = serial.Serial('/dev/ttyACM0', 115200, timeout=1)
 #ser = serial.Serial('/dev/ttyUSB0', 115200, timeout=1)
-ser = serial.Serial('/dev/pts/1', 115200, timeout=1)
+ser = serial.Serial('ttyS10', 115200, timeout=1)
 
 app = Flask(__name__)
 socketio = SocketIO(app)
