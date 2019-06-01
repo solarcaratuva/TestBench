@@ -1,7 +1,5 @@
 $(document).ready(function() {
     var namespace = '/test';
-    console.log(document.domain);
-    console.log(location.port);
     var socket = io.connect('http://' + document.domain + ':' + location.port + namespace);
     socket.on('connect', function() {
         console.log("connected!");

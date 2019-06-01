@@ -20,7 +20,6 @@ def check_serial():
         if len(data) > 0:
             try:
                 data = data.decode("utf-8")
-                print(data)
                 json_data = json.loads(data)
                 print(json_data)
                 socketio.emit("update", {'data': json_data}, namespace="/test")
