@@ -1,19 +1,50 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-    <meta charset="UTF-8">
-    <link href="static/css/main.css" rel="stylesheet" />
-    <title></title>
+  <meta name="generator" content=
+  "HTML Tidy for HTML5 for Linux version 5.7.16">
+  <meta charset="UTF-8">
+  <link href="static/css/main.css" rel="stylesheet">
+  <title></title>
 </head>
-
 <body>
-    <div id="wrapper">
-        <div id="status">
-        </div>
-    </div>
-    <script src="static/js/jquery.min.js"></script>
-    <script src="static/js/socket.io.js"></script>
-    <script src="static/js/client.js"></script>
+  <div id="wrapper">
+    <h2>Input States</h2>
+    <table id="input-status">
+      <tr id="input-headers">
+        <th id="BRAKE_CTRL">BRAKE</th>
+        <th id="REGEN_CTRL">REGEN</th>
+        <th id="GEARSHIFT_CTRL">GEARSHIFT</th>
+        <th id="TURNSIG_CTRL">TURNSIG</th>
+        <th id="THROTTLE_CTRL">THROTTLE</th>
+        <th id="STEER_CTRL">STEER</th>
+        <th id="HAZARD_CTRL">HAZARD</th>
+        <th id="DOWN_CTRL">DOWN</th>
+        <th id="UP_CTRL">UP</th>
+        <th id="SEL_CTRL">SEL</th>
+        <th id="KILL_SENSE">KILL</th>
+        <th id="HORN_CTRL">HORN</th>
+        <th id="HEADLIGHT_CTRL">HEADLIGHT</th>
+      </tr>
+      <tr id="input-values">
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+  <script src="static/js/jquery.min.js"></script> 
+  <script src="static/js/socket.io.js"></script> 
+  <script src="static/js/client.js"></script>
 </body>
 </html>
