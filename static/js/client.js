@@ -15,12 +15,8 @@ $(document).ready(function() {
             }
             switch(msg.data["type"]) {
                 case "inputs":
-                    console.log(key);
                     var colIndex = $("#input-headers").children().index($("#" + key));
                     $("#input-values").children().eq(colIndex).html(msg.data[key]);
-                    //console.log($("#input-values").children().eq(colIndex));
-                    console.log(colIndex);
-                    //$("#" + key).html(msg.data[key]);
                     break;
                 case "can0":
                     break;
