@@ -18,9 +18,13 @@ $(document).ready(function() {
                     var colIndex = $("#input-headers").children().index($("#" + key));
                     $("#input-values").children().eq(colIndex).html(msg.data[key]);
                     break;
-                case "can0":
+                case "kls_l":
+                    var colindex = $("#kls-l-headers").children().index($("#kls-l-" + key));
+                    $("#kls-l-values").children().eq(colindex).html(msg.data[key]);
                     break;
-                case "can1":
+                case "kls_r":
+                    var colindex = $("#kls-r-headers").children().index($("#kls-r-" + key));
+                    $("#kls-r-values").children().eq(colindex).html(msg.data[key]);
                     break;
             }
         }
