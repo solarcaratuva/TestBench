@@ -9,12 +9,17 @@ $(document).ready(function() {
         $( this ).first().CanvasJSChart(
             {
                 axisY:{
-                    maximum: max_heights[i]
+                    maximum: max_heights[i],
+                    margin: 0
                 },
+                //this is arbitrarily large but doesn't matter as overflow
+                //is hidden
+                dataPointWidth: 200,
                 axisX:{
                     gridThickness: 0,
                     tickLength: 0,
                     lineThickness: 0,
+                    tickThickness: 0,
                     labelFormatter: function(){
                       return " ";
                     }
@@ -33,8 +38,10 @@ $(document).ready(function() {
         $( this ).first().CanvasJSChart(
             {
                 axisY:{
-                    maximum: max_heights[i]
+                    maximum: max_heights[i],
+                    margin: 0
                 },
+                dataPointWidth: 200,
                 axisX:{
                     gridThickness: 0,
                     tickLength: 0,
