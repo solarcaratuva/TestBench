@@ -79,7 +79,7 @@ $(document).ready(function() {
             switch(msg.data["type"]) {
                 case "inputs":
                     var colIndex = $("#input-headers").children().index($("#" + key));
-                    $("#input-values").children().eq(colIndex).CanvasJSChart();
+                    $("#input-values").children().eq(colIndex).html(msg.data[key]);
                     break;
                 case "kls_l":
                     var colindex_left = $("#kls-l-headers").children().index($("#kls-l-" + key));
