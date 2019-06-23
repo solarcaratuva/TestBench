@@ -1,9 +1,23 @@
+@font-face {
+  font-family: "Roboto Mono";
+  src: url("../fonts/RobotoMono-Regular.ttf");
+}
+
 * {
-    font-family: monospace;
+    font-family: "Roboto Mono", monospace;
+    color: #fff;
 }
 
 html {
     background-color: #000;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+h2 {
+    font-size: 1em;
 }
 
 #wrapper {
@@ -16,5 +30,15 @@ html {
 }
 
 #left-gauge, #right-gauge {
+    width: 100%;
+}
+
+.gauge-wrapper {
     width: 40vw;
+    height: 100%;
+}
+
+.gauge-wrapper > h1, .gauge-wrapper > h2 {
+    text-align: center;
+    margin: 0;
 }

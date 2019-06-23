@@ -9,12 +9,27 @@
 </head>
 <body>
   <div id="wrapper">
-    <canvas id="left-gauge">
-    </canvas>
-    <div id="info-gauge">
+    <div class="gauge-wrapper">
+        <h1 id="speed-display"></h1>
+        <h2>MPH</h2>
+        <canvas id="left-gauge">
+        </canvas>
     </div>
-    <canvas id="right-gauge">
-    </canvas>
+    <div id="info-gauge">
+        <span id="left-power"></span>
+        <span id="right-power"></span>
+        <span id="throttle"></span>
+        <span id="left-c-temp"></span>
+        <span id="left-m-temp"></span>
+        <span id="right-c-temp"></span>
+        <span id="right-m-temp"></span>
+    </div>
+    <div class="gauge-wrapper">
+        <h1 id="rpm-display"></h1>
+        <h2>RPM</h2>
+        <canvas id="right-gauge">
+        </canvas>
+    </div>
   </div>
   <script src="static/js/jquery.min.js"></script> 
   <script src="static/js/socket.io.js"></script> 

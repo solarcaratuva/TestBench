@@ -86,6 +86,13 @@ let rpm = 0;
 let leftRPM = 0;
 let rightRPM = 0;
 let speed = 0;
+let leftPower = 0;
+let rightPower = 0;
+let throttle = 0;
+let leftCTemp = 0;
+let rightCTemp = 0;
+let leftMTemp = 0;
+let rightMTemp = 0;
 
 $(document).ready(function() {
 
@@ -116,15 +123,26 @@ $(document).ready(function() {
         switch(msg.data["type"]) {
             case "kls_l":
                 leftRPM = parseInt(msg.data["rpm"]);
+                leftPower = parseInt(msg.data["voltage"]) * parseInt(msg.data["current"]);
+                throttle = parseInt(msg.data["throttle"]);
+                leftCTemp = parseInt(msg.data["controller_temp"]);
+                leftMTemp = parseInt(msg.data["motor_temp"]);
                 break;
             case "kls_r":
                 rightRPM = parseInt(msg.data["rpm"]);
+                rightPower = parseInt(msg.data["voltage"]) * parseInt(msg.data["current"]);
+                throttle = parseInt(msg.data["throttle"]);
+                rightCTemp = parseInt(msg.data["controller_temp"]);
+                rightMTemp = parseInt(msg.data["motor_temp"]);
                 break;
         }
         rpm = (leftRPM + rightRPM) / 2.0;
         speed = (rpm * 60) * (15 * Math.PI) / 63360;
-        console.log(speed);
         rpmGauge.set(rpm / 2000.0);
         speedGauge.set(speed);
+        $("#rpm-display").html(rpm);
+        $("#speed-display").html(Math.round(speed));
+        $("#left-power").html(leftPower + " W");
+        $("#right-power").html(rightPower + " W");
     });
 });

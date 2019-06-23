@@ -16,8 +16,8 @@ while True:
 
     kls_l_json["type"] = "kls_l"
     kls_l_json["rpm"] = rpm
-    kls_l_json["current"] = random.randint(0, 400)
-    kls_l_json["voltage"] = random.randint(0, 1800)
+    kls_l_json["current"] = random.randint(0, 50)
+    kls_l_json["voltage"] = random.randint(0, 136)
     kls_l_json["throttle"] = random.randint(0, 255)
     kls_l_json["controller_temp"] = random.randint(0, 100)
     kls_l_json["motor_temp"] = random.randint(0, 100)
@@ -28,8 +28,8 @@ while True:
 
     kls_r_json["type"] = "kls_r"
     kls_r_json["rpm"] = rpm
-    kls_r_json["current"] = random.randint(0, 400)
-    kls_r_json["voltage"] = random.randint(0, 1800)
+    kls_r_json["current"] = random.randint(0, 50)
+    kls_r_json["voltage"] = random.randint(0, 136)
     kls_r_json["throttle"] = random.randint(0, 255)
     kls_r_json["controller_temp"] = random.randint(0, 100)
     kls_r_json["motor_temp"] = random.randint(0, 100)
