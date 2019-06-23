@@ -32,6 +32,10 @@ def check_serial():
 def index():
     return render_template("index.html")
 
+@app.route("/dash")
+def dash():
+    return render_template("dash.html")
+
 
 @socketio.on("client_connected")
 def client_connected(data):
@@ -39,12 +43,12 @@ def client_connected(data):
     print(str(data))
 
 
-@socketio.on("connected", namespace="/test")
+@socketio.on("connected")
 def connected():
     print("connected")
 
 
-@socketio.on("disconnected", namespace="/test")
+@socketio.on("disconnected")
 def disconnected():
     print("disconnected")
 

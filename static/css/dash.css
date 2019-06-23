@@ -1,0 +1,20 @@
+* {
+    font-family: monospace;
+}
+
+html {
+    background-color: #000;
+}
+
+#wrapper {
+    width: 100vw;
+    display: flex;
+}
+
+#info-gauge {
+    width: 20vw;
+}
+
+#left-gauge, #right-gauge {
+    width: 40vw;
+}
