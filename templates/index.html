@@ -8,77 +8,83 @@
   <title>UVA Solar Car TestBench</title>
 </head>
 <body>
-  <div id="wrapper">
-    <h2>Input State</h2>
-    <table id="input-status">
-      <tr id="input-headers">
-        <th id="BRAKE_CTRL">BRAKE</th>
-        <th id="REGEN_CTRL">REGEN</th>
-        <th id="GEARSHIFT_CTRL">GEARSHIFT</th>
-        <th id="TURNSIG_CTRL">TURNSIG</th>
-        <th id="THROTTLE_CTRL">THROTTLE</th>
-        <th id="STEER_CTRL">STEER</th>
-        <th id="HAZARD_CTRL">HAZARD</th>
-        <th id="DOWN_CTRL">DOWN</th>
-        <th id="UP_CTRL">UP</th>
-        <th id="SEL_CTRL">SEL</th>
-        <th id="KILL_SENSE">KILL</th>
-        <th id="HORN_CTRL">HORN</th>
-        <th id="HEADLIGHT_CTRL">HEADLIGHT</th>
-      </tr>
-      <tr id="input-values">
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-    </table>
-    <h2>Left Motor State</h2>
-    <table id="kls-l-status">
-        <tr id="kls-l-headers">
-            <th id="kls-l-rpm">RPM</th>
-            <th id="kls-l-current">Current</th>
-            <th id="kls-l-voltage">Voltage</th>
-            <th id="kls-l-controller_temp">Controller Temp.</th>
-            <th id="kls-l-motor_temp">Motor Temp.</th>
-        </tr>
-        <tr id="kls-l-values">
+    <div id="wrapper">
+        <h2>Input State</h2>
+        <table id="input-status">
+          <tr id="input-headers">
+            <th id="BRAKE_CTRL">BRAKE</th>
+            <th id="REGEN_CTRL">REGEN</th>
+            <th id="GEARSHIFT_CTRL">GEARSHIFT</th>
+            <th id="TURNSIG_CTRL">TURNSIG</th>
+            <th id="THROTTLE_CTRL">THROTTLE</th>
+            <th id="STEER_CTRL">STEER</th>
+            <th id="HAZARD_CTRL">HAZARD</th>
+            <th id="DOWN_CTRL">DOWN</th>
+            <th id="UP_CTRL">UP</th>
+            <th id="SEL_CTRL">SEL</th>
+            <th id="KILL_SENSE">KILL</th>
+            <th id="HORN_CTRL">HORN</th>
+            <th id="HEADLIGHT_CTRL">HEADLIGHT</th>
+          </tr>
+          <tr id="input-values">
             <td></td>
             <td></td>
             <td></td>
             <td></td>
             <td></td>
-        </tr>
-    </table>
-    <h2>Right Motor State</h2>
-    <table id="kls-r-status">
-        <tr id="kls-r-headers">
-            <th id="kls-r-rpm">RPM</th>
-            <th id="kls-r-current">Current</th>
-            <th id="kls-r-voltage">Voltage</th>
-            <th id="kls-r-controller_temp">Controller Temp.</th>
-            <th id="kls-r-motor_temp">Motor Temp.</th>
-        </tr>
-        <tr id="kls-r-values">
             <td></td>
             <td></td>
             <td></td>
             <td></td>
             <td></td>
-        </tr>
-    </table>
-
-  </div>
-  <script src="static/js/jquery.min.js"></script> 
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </table>
+    </div>
+    <div id="lrpanel">
+        <div id= "left-panel">
+            <h2>Left Motor State</h2>
+            <table id="kls-l-status">
+                <tr id="kls-l-headers">
+                    <th id="kls-l-rpm">RPM</th>
+                    <th id="kls-l-current">Current</th>
+                    <th id="kls-l-voltage">Voltage</th>
+                    <th id="kls-l-controller_temp">Controller Temp.</th>
+                    <th id="kls-l-motor_temp">Motor Temp.</th>
+                </tr>
+                <tr id="kls-l-values">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div id= "right-panel">
+            <h2>Right Motor State</h2>
+            <table id="kls-r-status">
+                <tr id="kls-r-headers">
+                    <th id="kls-r-rpm">RPM</th>
+                    <th id="kls-r-current">Current</th>
+                    <th id="kls-r-voltage">Voltage</th>
+                    <th id="kls-r-controller_temp">Controller Temp.</th>
+                    <th id="kls-r-motor_temp">Motor Temp.</th>
+                </tr>
+                <tr id="kls-r-values">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+  <script src="static/js/jquery.min.js"></script>
+  <script src="static/js/jquery.canvasjs.min.js"></script>
   <script src="static/js/socket.io.js"></script> 
   <script src="static/js/client.js"></script>
 </body>
