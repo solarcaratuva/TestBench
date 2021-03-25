@@ -12,6 +12,6 @@ monotonic==1.5
 pyserial==3.4
 python-engineio==3.7.0
 python-socketio==4.0.3
-PyYAML==5.1
+PyYAML==5.4
 six==1.12.0
 Werkzeug==0.15.4
